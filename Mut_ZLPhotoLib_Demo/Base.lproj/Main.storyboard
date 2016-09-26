@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="evB-ch-REF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ZLPhotoLib 上传多张图片-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Hg-p2-gCL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="4Ib-IP-dak"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gw3-tN-yiG">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PictureCollectionViewCell" id="vDC-v1-aIK" customClass="PictureCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <size key="customSize" width="64" height="64"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="V0A-gB-Fhw"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cf5-7E-k0K"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGn-ib-Whk">
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jh.png" translatesAutoresizingMaskIntoConstraints="NO" id="MVq-Ik-qel">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="118" id="hOT-1z-dFv"/>
+                                            <constraint firstAttribute="width" constant="124" id="iZD-3f-NFa"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请添加与疾病相关的影像、超声、心电图、实验室检查报告单等影像资料或患处照片。 单张图片大小不得大于10M" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3G-k5-aSL">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="c3G-k5-aSL" secondAttribute="bottom" constant="41" id="5Je-vi-dnH"/>
+                                    <constraint firstAttribute="bottom" secondItem="MVq-Ik-qel" secondAttribute="bottom" constant="26" id="Bt1-OJ-NRp"/>
+                                    <constraint firstItem="MVq-Ik-qel" firstAttribute="top" secondItem="zGn-ib-Whk" secondAttribute="top" constant="16" id="EWG-x7-uEa"/>
+                                    <constraint firstItem="MVq-Ik-qel" firstAttribute="leading" secondItem="zGn-ib-Whk" secondAttribute="leading" constant="14" id="Vbk-NA-vYb"/>
+                                    <constraint firstAttribute="height" constant="160" id="asJ-dx-U3l"/>
+                                    <constraint firstItem="c3G-k5-aSL" firstAttribute="top" secondItem="zGn-ib-Whk" secondAttribute="top" constant="26" id="b2G-BJ-Z9r"/>
+                                    <constraint firstItem="c3G-k5-aSL" firstAttribute="leading" secondItem="MVq-Ik-qel" secondAttribute="trailing" constant="20" id="bbX-zs-HJy"/>
+                                    <constraint firstAttribute="trailing" secondItem="c3G-k5-aSL" secondAttribute="trailing" constant="14" id="zWq-Cl-FO2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5Hg-p2-gCL" secondAttribute="trailing" id="8X7-V6-h6X"/>
+                            <constraint firstAttribute="trailing" secondItem="zGn-ib-Whk" secondAttribute="trailing" id="fwt-Tg-A8r"/>
+                            <constraint firstItem="zGn-ib-Whk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g2t-fD-nn2"/>
+                            <constraint firstItem="5Hg-p2-gCL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="kAh-yV-5UU"/>
+                            <constraint firstItem="5Hg-p2-gCL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o2d-ZH-8fm"/>
+                            <constraint firstItem="zGn-ib-Whk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="p51-2v-yqh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ZLPhotoLib 上传多张图片" id="gvH-cc-VT6"/>
+                    <connections>
+                        <outlet property="addImageView" destination="MVq-Ik-qel" id="OAk-B8-Nz6"/>
+                        <outlet property="checkReportPicsCollectionView" destination="5Hg-p2-gCL" id="30d-dp-fFf"/>
+                        <outlet property="checkReportPicsMaskView" destination="zGn-ib-Whk" id="2PG-v1-4xE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="-545.57721139430294"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pw2-3q-iBb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="evB-ch-REF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mIe-6H-5ys">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GYO-uf-DB7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A4t-Ja-7uU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.799999999999997" y="-545.57721139430294"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jh.png" width="65" height="65"/>
+    </resources>
+</document>
